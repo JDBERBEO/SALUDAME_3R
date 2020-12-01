@@ -19,18 +19,14 @@ app.set('view engine', '.hbs')
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
-app.get('/',(req,res)=> {
-    res.render('home', {
-        nombre: 'Juan'
-    })
-})
+
 //routes
 
-app.get('/user',(req,res)=>{
+app.get('/',(req,res)=>{
     res.render('user')
 })
 
-app.post('/user', (req,res)=> {
+app.post('/', (req,res)=> {
     res.render('greetings', {
         name: req.body.name
     })
