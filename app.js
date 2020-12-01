@@ -24,10 +24,7 @@ app.get('/',(req,res)=> {
         nombre: 'Juan'
     })
 })
-
-app.get('/about',(req,res)=>{
-    res.render('about')
-})
+//routes
 
 app.get('/user',(req,res)=>{
     res.render('user')
